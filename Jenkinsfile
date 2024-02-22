@@ -6,9 +6,12 @@ pipeline {
             steps {
                 script {
                     def mvnHome = tool 'Maven3'
-                    sh "${mvnHome}\\bin\\mvn clean install" 
+                    withEnv(["PATH+MAVEN=${mvnHome}\\bin"]) {
+                        sh 'mvn clean install'
+                    }
                 }
             }
         }
     }
 }
+
