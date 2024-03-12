@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Check out the code from your version control system
-                git 'https://github.com/farhansohail1501/comp367-webapp'
+                // Check out the code from the "main" branch
+                git branch: 'main', url: 'https://github.com/farhansohail1501/comp367-webapp'
             }
         }
 
