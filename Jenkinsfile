@@ -4,10 +4,6 @@ pipeline {
         maven 'Maven3'
         jdk 'JDK'
     }
-    tools {
-        maven 'Maven3'
-        jdk 'JDK'
-    }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('937e9703-dc8d-4252-ae7b-69bf079cad0e')
     }
