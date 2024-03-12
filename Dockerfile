@@ -6,6 +6,9 @@ WORKDIR /workspace/app
 COPY mvnw .
 COPY .mvn .mvn
 
+# Make Maven wrapper executable
+RUN chmod +x mvnw
+
 # Copy the project files
 COPY pom.xml .
 COPY src src
