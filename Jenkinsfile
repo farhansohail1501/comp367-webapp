@@ -50,6 +50,7 @@ pipeline {
                 // Push Docker image to Docker Hub
                 bat 'docker push sohailfarhan/lab3'
             }
-        }
-    }
 }
+}
+}
+
