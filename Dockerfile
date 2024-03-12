@@ -3,6 +3,7 @@ FROM eclipse-temurin:17-jdk-alpine as build
 WORKDIR /workspace/app
 
 # Copy the Maven wrapper files
+# Copy the Maven wrapper files
 COPY mvnw .
 COPY .mvn .mvn
 
@@ -10,6 +11,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
 
+# Build the application with Maven
 # Build the application with Maven
 RUN --mount=type=cache,target=/root/.m2 ./mvnw install -DskipTests
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
