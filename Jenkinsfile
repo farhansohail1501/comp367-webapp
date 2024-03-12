@@ -18,8 +18,7 @@ pipeline {
         stage('Build Maven Project') {
             steps {
                 // Run Maven build
-               def mavenHome = tool 'Maven3' // Make sure 'Maven' matches your Jenkins tool configuration
-                    bat "${mavenHome}/bin/mvn clean install -DskipTests"
+               bat './mvnw install -DskipTests'
             }
         }
 
